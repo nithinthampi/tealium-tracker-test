@@ -44,4 +44,4 @@ function flushUtagQueue({ debugMode }) {
   }
 }
 
-export { callUtag, flushUtagQueue };
+module.exports =  { callUtag, flushUtagQueue };

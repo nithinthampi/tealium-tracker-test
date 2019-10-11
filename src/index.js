@@ -1,4 +1,4 @@
-import { callUtag, flushUtagQueue } from "./utagCaller";
+const { callUtag, flushUtagQueue } = require("./utagCaller");
 
 function initTealiumTracker({ schema, debugMode = false } = {}) {
   document.addEventListener("utag-loaded", () => {
@@ -51,6 +51,5 @@ function initTealiumTracker({ schema, debugMode = false } = {}) {
   };
 }
 
-export default initTealiumTracker;
 module.exports = initTealiumTracker;
 module.exports.default = initTealiumTracker;
