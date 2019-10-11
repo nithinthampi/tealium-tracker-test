@@ -1,0 +1,52 @@
+{
+  "name": "tealium-tracker-test",
+  "version": "0.0.1",
+  "description": "Easily connect Tealium to your application.",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "prettier": "prettier --write \"**/*.{js,json,md}\"",
+    "lint": "eslint --max-warnings 0 \"**/*.js\"",
+    "test": "echo \"Coming soon!\"",
+    "transpile": "rimraf dist && babel src -d dist --ignore \"src/**/*.test.js\"",
+    "prepublish": "npm run transpile && webpack"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier && npm run lint"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0",
+    "husky": "^3.0.5",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "keywords": [
+    "tealium",
+    "tracker",
+    "event",
+    "analytics",
+    "utag"
+  ],
+  "homepage": "https://github.com/moroshko/tealium-tracker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moroshko/tealium-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moroshko/tealium-tracker/issues"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "author": "Misha Moroshko <michael.moroshko@gmail.com>",
+  "license": "MIT"
+}
