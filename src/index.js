@@ -52,4 +52,5 @@ function initTealiumTracker({ schema, debugMode = false } = {}) {
 }
 
 export default initTealiumTracker;
+module.exports = initTealiumTracker;
 module.exports.default = initTealiumTracker;
